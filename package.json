@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "tsc -w",
-    "dev": "nodemon app.ts",
+    "dev": "nodemon",
     "start": "node dist/index.js",
     "build": "tsc",
     "build:lib": "tsc"
@@ -26,6 +26,7 @@
     "http": "^0.0.1-security",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.3.1",
+    "nodemon": "^2.0.22",
     "path": "^0.12.7",
     "yamljs": "^0.3.0"
   },
