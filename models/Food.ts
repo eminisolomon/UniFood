@@ -1,5 +1,5 @@
 import mongoose, { Document, Schema } from 'mongoose';
-import { IFood } from '@/interfaces/Food';
+import { IFood } from '../interfaces/Food';
 
 export interface IFoodModel extends IFood, Document {}
 

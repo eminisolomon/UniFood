@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getAllRole } from '@controllers/roleController';
+import { getAllRole } from '../controllers/roleController';
 
 const _router: Router = Router({
   mergeParams: true,

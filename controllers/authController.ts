@@ -1,13 +1,13 @@
 import { NextFunction, Request, Response } from 'express';
-import HttpError from '@utils/httpError';
-import { jsonOne } from '@utils/general';
+import HttpError from '../utils/httpError';
+import { jsonOne } from '../utils/general';
 import { matchedData } from 'express-validator';
-import User, { IUserModel } from '@models/User';
-import { tokenBuilder } from '@utils/Jwt';
+import User, { IUserModel } from '../models/User';
+import { tokenBuilder } from '../utils/Jwt';
 import { compare, hash } from 'bcrypt';
-import { AuthInterface } from '@interfaces/Auth';
-import { RoleType, OtpType } from '@utils/enums';
-import Role from '@/models/Role';
+import { AuthInterface } from '../interfaces/Auth';
+import { RoleType, OtpType } from '../utils/enums';
+import Role from '../models/Role';
 
 const createUser = async (req: Request, res: Response, next: NextFunction) => {
   try {

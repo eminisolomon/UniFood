@@ -1,4 +1,4 @@
-import { Response } from '@interfaces/Response';
+import { Response } from '../interfaces/Response';
 
 const jsonAll = function <Res>(res: any, status: number, data: Res | Array<Res>, meta: Object = {}): Response<Res> {
   return res.status(status).json({

@@ -1,5 +1,5 @@
 import mongoose, { Document, Schema } from 'mongoose';
-import { IAddress } from '@interfaces/Address';
+import { IAddress } from '../interfaces/Address';
 
 export interface IAddressModel extends IAddress, Document {}
 

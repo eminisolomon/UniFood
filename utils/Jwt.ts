@@ -1,6 +1,6 @@
 import * as jwt from 'jsonwebtoken';
 import HttpError from './httpError';
-import { IUserModel } from '@/models/User';
+import { IUserModel } from '../models/User';
 
 const generateJWT = function (payload = {}, options = {}) {
   const privateKey = process.env.JWT_SECRETS;

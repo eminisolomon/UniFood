@@ -4,15 +4,15 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import config from './config/config';
 import { CREDENTIALS, ORIGIN } from './config/config';
-import Logging from '@utils/Logging';
-import { router as v1 } from '@routes/v1/index';
-import HttpError from '@utils/httpError';
-import { createRole } from '@controllers/roleController';
+import Logging from './utils/Logging';
+import { router as v1 } from './routes/v1/index';
+import HttpError from './utils/httpError';
+import { createRole } from './controllers/roleController';
 
 import swaggerUI from 'swagger-ui-express';
 import YAML from 'yamljs';
 import path from 'path';
-const swaggerJsDocs = YAML.load('@docs/documentation.yaml');
+const swaggerJsDocs = YAML.load('./docs/swagger.yaml');
 
 const router = express();
 
@@ -52,24 +52,24 @@ const StartServer = async () => {
     next();
   });
 
-  router.use('/v1/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerJsDocs));
+  router.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerJsDocs));
   router.use('/api', v1);
   router.use(cors({ origin: ORIGIN, credentials: CREDENTIALS }));
 
   router.get('/ping', (req, res, next) => res.status(200).json({ message: 'pong' }));
 
-  router.use('/', express.static(path.join(__dirname, '@public')));
+  router.use('/', express.static(path.join(__dirname, './public')));
 
   router.get('/', (req: Request, res: Response) => {
     if (req.accepts('html')) {
-      res.sendFile(path.join(__dirname, '@views/index.html'));
+      res.sendFile(path.join(__dirname, './views/index.html'));
     }
   });
 
   router.use((req: Request, res: Response, next: NextFunction) => {
     res.status(404);
     if (req.accepts('html')) {
-      res.sendFile(path.join(__dirname, '@views/404.html'));
+      res.sendFile(path.join(__dirname, './views/404.html'));
     }
   });
 

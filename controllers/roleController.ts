@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
-import { jsonAll } from '@utils/general';
-import Role from '@models/Role';
+import { jsonAll } from '../utils/general';
+import Role from '../models/Role';
 
 export async function createRole() {
   try {
