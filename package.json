@@ -1,8 +1,8 @@
 {
-  "name": "typescript-express-starter",
-  "version": "0.0.0",
-  "description": "TypeScript + Mongoose + MongoDB + Express API Server",
-  "author": "",
+  "name": "unifood",
+  "version": "1.0.0",
+  "description": "Food Ordering",
+  "author": "Solomon Olatunji <realsolomon01@outlook.com>",
   "license": "ISC",
   "scripts": {
     "start": "yarn run build && cross-env NODE_ENV=production node dist/server.js",
@@ -75,5 +75,8 @@
     "tsc-alias": "^1.7.0",
     "tsconfig-paths": "^4.0.0",
     "typescript": "^4.7.4"
-  }
+  },
+  "main": "server.ts",
+  "repository": "https://github.com/devrealsolomon/UniFood.git",
+  "private": true
 }
