@@ -1,0 +1,12 @@
+2023-07-03 08:20:36 error: uncaughtException: options url, options are not supported
+MongoParseError: options url, options are not supported
+    at parseOptions (/home/realsolomon/realsolomon/Unifood/node_modules/mongodb/src/connection_string.ts:359:11)
+    at new MongoClient (/home/realsolomon/realsolomon/Unifood/node_modules/mongodb/src/mongo_client.ts:356:34)
+    at /home/realsolomon/realsolomon/Unifood/node_modules/mongoose/lib/connection.js:802:16
+    at new Promise (<anonymous>)
+    at NativeConnection.Connection.openUri (/home/realsolomon/realsolomon/Unifood/node_modules/mongoose/lib/connection.js:799:19)
+    at /home/realsolomon/realsolomon/Unifood/node_modules/mongoose/lib/index.js:414:10
+    at /home/realsolomon/realsolomon/Unifood/node_modules/mongoose/lib/helpers/promiseOrCallback.js:41:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/realsolomon/realsolomon/Unifood/node_modules/mongoose/lib/helpers/promiseOrCallback.js:40:10)
+    at Mongoose._promiseOrCallback (/home/realsolomon/realsolomon/Unifood/node_modules/mongoose/lib/index.js:1288:10)

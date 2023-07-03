@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/home/realsolomon/realsolomon/Unifood/src/logs/debug/.fe5a9868e4bb0cffe992e38739b4f034bf2a1930-audit.json",
+    "files": [
+        {
+            "date": 1688368569954,
+            "name": "/home/realsolomon/realsolomon/Unifood/src/logs/debug/2023-07-03.log",
+            "hash": "e60526e289052810c7f37021981aeb983694f1d69307a17f57b9595e3740e21b"
+        }
+    ],
+    "hashType": "sha256"
+}

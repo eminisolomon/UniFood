@@ -116,5 +116,7 @@ definitions:
         description: user Password
 
 schemes:
- - https
- - http
+  bearerAuth:
+    type: http
+    scheme: bearer
+    bearerFormat: JWT

@@ -34,10 +34,8 @@ export class App {
 
   public listen() {
     this.app.listen(this.port, () => {
-      logger.info(`=================================`);
-      logger.info(`======= ENV: ${this.env} =======`);
+      logger.info(`ENV: ${this.env}`);
       logger.info(`🚀 App listening on the port ${this.port}`);
-      logger.info(`=================================`);
     });
   }
 
@@ -50,7 +48,7 @@ export class App {
       set('debug', true);
     }
 
-    await connect(dbConnection.url, dbConnection.options);
+    await connect(dbConnection.url, {autoIndex: false,});
   }
 
   private initializeMiddlewares() {
