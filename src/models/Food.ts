@@ -1,7 +1,5 @@
-import mongoose, { Document, Schema } from 'mongoose';
-import { IFood } from '../interfaces/Food';
-
-export interface IFoodModel extends IFood, Document {}
+import { model, Document, Schema } from 'mongoose';
+import { Food } from '../interfaces/Food';
 
 const FoodSchema: Schema = new Schema(
   {
@@ -33,4 +31,4 @@ const FoodSchema: Schema = new Schema(
   { timestamps: true },
 );
 
-export default mongoose.model<IFoodModel>('Food', FoodSchema);
+export const FoodModel =model<Food & Document>('Food', FoodSchema);

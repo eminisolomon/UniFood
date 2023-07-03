@@ -1,7 +1,5 @@
-import mongoose, { Document, Schema } from 'mongoose';
-import { IAddress } from '../interfaces/Address';
-
-export interface IAddressModel extends IAddress, Document {}
+import mongoose, { model, Document, Schema } from 'mongoose';
+import { Address } from '@interfaces/Address';
 
 const AddressSchema: Schema = new Schema(
   {
@@ -29,4 +27,4 @@ const AddressSchema: Schema = new Schema(
   { timestamps: true },
 );
 
-export default mongoose.model<IAddressModel>('Address', AddressSchema);
+export const AddressModel = model<Address & Document>('Address', AddressSchema);
