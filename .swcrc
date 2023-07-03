@@ -18,19 +18,20 @@
       "compress": false,
       "mangle": false
     },
-    "baseUrl": "./",
+    "baseUrl": "src",
     "paths": {
       "@/*": ["*"],
-      "@config/*": ["config/*"],
+      "@config": ["config"],
       "@controllers/*": ["controllers/*"],
+      "@database": ["database"],
+      "@dtos/*": ["dtos/*"],
+      "@exceptions/*": ["exceptions/*"],
       "@interfaces/*": ["interfaces/*"],
-      "@middlenames/*": ["middlenames/*"],
+      "@middlewares/*": ["middlewares/*"],
       "@models/*": ["models/*"],
       "@routes/*": ["routes/*"],
       "@services/*": ["services/*"],
-      "@templates/*": ["templates/*"],
-      "@utils/*": ["utils/*"],
-      "@validators/*": ["validators/*"]
+      "@utils/*": ["utils/*"]
     }
   },
   "module": {
