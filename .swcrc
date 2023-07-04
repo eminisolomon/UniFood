@@ -22,6 +22,7 @@
     "paths": {
       "@/*": ["*"],
       "@config": ["config"],
+      "@templates": ["templates"],
       "@controllers/*": ["controllers/*"],
       "@database": ["database"],
       "@dtos/*": ["dtos/*"],
