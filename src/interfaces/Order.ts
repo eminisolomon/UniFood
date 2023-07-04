@@ -10,6 +10,7 @@ interface Image {
 }
 
 export interface Order {
+  _id?: string;
   user?: string;
   tableNumber?: number;
   isGuest: boolean;

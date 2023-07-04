@@ -1,4 +1,4 @@
-import { model, Document, Schema } from 'mongoose';
+import mongoose, { model, Document, Schema } from 'mongoose';
 import { Food } from '../interfaces/Food';
 
 const FoodSchema: Schema = new Schema(
@@ -27,8 +27,13 @@ const FoodSchema: Schema = new Schema(
       type: Number,
       required: true,
     },
+    restaurant: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Restaurant',
+      required: true,
+    },
   },
   { timestamps: true },
 );
 
-export const FoodModel =model<Food & Document>('Food', FoodSchema);
+export const FoodModel = model<Food & Document>('Food', FoodSchema);

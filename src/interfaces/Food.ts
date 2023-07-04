@@ -1,3 +1,5 @@
+import { Restaurant } from "./Restaurant";
+
 interface Image {
   url: string;
 }
@@ -8,4 +10,5 @@ export interface Food {
   images: Image[];
   category: string;
   price: number;
+  restaurant: Restaurant;
 }
