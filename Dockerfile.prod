@@ -1,19 +1,13 @@
-# NodeJS Version 16
-FROM node:16.18-buster-slim
+FROM node:18
 
-# Copy Dir
 COPY . ./app
 
-# Work to Dir
 WORKDIR /app
 
-# Install Node Package
-RUN yarn install --legacy-peer-deps
+RUN npm install --legacy-peer-deps
 
-# Set Env
 ENV NODE_ENV production
 
 EXPOSE 3000
 
-# Cmd script
-CMD ["yarn", "run", "start"]
+CMD ["npm", "run", "start"]

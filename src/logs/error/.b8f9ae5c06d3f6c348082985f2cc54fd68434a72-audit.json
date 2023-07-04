@@ -9,6 +9,11 @@
             "date": 1688368569961,
             "name": "/home/realsolomon/realsolomon/Unifood/src/logs/error/2023-07-03.log",
             "hash": "40186e4ab392ebb218d7941d953416806e724a172c616a8ccfaa86e790f39731"
+        },
+        {
+            "date": 1688460049447,
+            "name": "/home/realsolomon/realsolomon/Unifood/src/logs/error/2023-07-04.log",
+            "hash": "333c7490b7372040158127ede1660763e1cad418d1da42cd5830fd8d90fd56dc"
         }
     ],
     "hashType": "sha256"
