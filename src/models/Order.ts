@@ -10,6 +10,9 @@ const OrderSchema: Schema = new Schema(
     tableNumber: {
       type: Number,
     },
+    paymentReference: {
+      type: String,
+    },
     isGuest: {
       type: Boolean,
       required: true,
